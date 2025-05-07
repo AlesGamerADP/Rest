@@ -1,1 +1,54 @@
+# Ignorar archivos de entornos virtuales
 */venv
+.env
+.env.*
+
+# Archivos y directorios de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+
+# Archivos de bases de datos (SQLite)
+db.sqlite3
+db.sqlite3-journal
+
+# Archivos generados por Django
+*.log
+*.pot
+*.pyc
+
+# Archivos de la base de datos de pruebas
+test.sqlite3
+
+# Directorios de medios y estáticos
+media/
+staticfiles/
+
+# Archivos y directorios de dependencias
+node_modules/
+bower_components/
+
+# Archivos generados por Docker
+*.tar
+docker-compose.yml
+Dockerfile
+
+# Archivos específicos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de IDEs
+.idea/
+.vscode/
+
+# Archivos de configuraciones de Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Pytest
+*.cover
+.coverage
+.coverage.*
+nosetests.xml
+pytest-debug.log

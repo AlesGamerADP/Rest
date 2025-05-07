@@ -25,25 +25,25 @@ router.register('api/personas', PersonaViewSet, 'personas')
 # -------------------------------------------------------
 urlpatterns = [
     # Filtro de personas usando DjangoFilterBackend
-    path('api/filter_personas/', FilterPersona.as_view(), name='filter_personas'),
+    path('api/personas/filter_personas/', FilterPersona.as_view(), name='filter_personas'),
     
     # Búsqueda de personas usando SearchFilter
-    path('api/list_personas/', PersonaListView.as_view(), name='list_personas'),
+    path('api/personas/list_personas/', PersonaListView.as_view(), name='list_personas'),
     
     # Obtener los detalles de una persona específica (por ID)
-    path('api/persona/<int:id>/', PersonaDetailView.as_view(), name='persona_detail'),
+    path('api/personas/<int:id>/', PersonaDetailView.as_view(), name='persona_detail'),
     
     # Actualizar datos de una persona existente
-    path('api/persona/update/<int:id>/', PersonaUpdateView.as_view(), name='persona_update'),
+    path('api/personas/update/<int:id>/', PersonaUpdateView.as_view(), name='persona_update'),
     
     # Eliminar una persona del sistema
-    path('api/persona/delete/<int:id>/', PersonaDeleteView.as_view(), name='persona_delete'),
+    path('api/personas/delete/<int:id>/', PersonaDeleteView.as_view(), name='persona_delete'),
     
     # Contar cuántas personas existen en la base de datos
-    path('api/persona/count/', PersonaCountView.as_view(), name='persona_count'),
+    path('api/personas/count/', PersonaCountView.as_view(), name='persona_count'),
     
     # Crear una nueva persona
-    path('api/persona/create/', PersonaCreateView.as_view(), name='persona_create'),
+    path('api/personas/create/', PersonaCreateView.as_view(), name='persona_create'),
 ]
 
 # -------------------------------------------------------
